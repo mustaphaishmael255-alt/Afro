@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Afro Tea</title>
+  <script src="script.js"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { primary: '#FF9933', secondary: '#FFD700' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+</head>
+
+<body class="bg-gray-50">
+  <!-- Header -->
+  <header class="header-nav fixed w-full z-50 py-4 px-6 bg-opacity-40 bg-white">
+    <div class="container mx-auto flex items-center justify-between">
+  
+      <nav class="hidden md:flex items-center space-x-8">
+        <div class="logo-container">
+    <a href="index.html">
+      <img src="logo.png" alt="Company Logo" class="logo-img">
+    </a>
+  </div>
+        <a href="#" class="text-gray-800 hover:text-primary font-medium relative group">
+          Home
+          <span
+            class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="#categories" class="text-gray-800 hover:text-primary font-medium relative group">
+          Categories
+          <span
+            class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="#about" class="text-gray-800 hover:text-primary font-medium relative group">
+          About Us
+          <span
+            class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="#testimonials" class="text-gray-800 hover:text-primary font-medium relative group">
+          Reviews
+          <span
+            class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="#contact" class="text-gray-800 hover:text-primary font-medium relative group">
+          Contact
+          <span
+            class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+        </a>
+      </nav>
+      <div class="flex items-center space-x-4">
+        <div class="relative hidden md:block">
+          <input type="text" placeholder="Search products..."
+            class="pl-10 pr-4 py-2 rounded-full text-sm border-none bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary/30 w-48">
+          <div
+            class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-500">
+            <i class="ri-search-line"></i>
+          </div>
+        </div>
+        <a href="#" class="relative w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary">
+          <i class="ri-shopping-cart-2-line text-xl"></i>
+          <span
+            class="absolute -top-1 -right-1 bg-primary text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">3</span>
+        </a>
+        <a href="#"
+          class="w-10 h-10 flex items-center justify-center bg-green-500 text-white rounded-full whatsapp-btn">
+          <i class="ri-whatsapp-line text-xl"></i>
+        </a>
+        <button class="md:hidden w-10 h-10 flex items-center justify-center" id="mobile-menu-button">
+          <i class="ri-menu-line text-2xl"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="md:hidden bg-white absolute w-full left-0 top-full shadow-lg py-4 px-6 hidden" id="mobile-menu">
+      <div class="flex items-center mb-4">
+        <input type="text" placeholder="Search products..."
+          class="pl-10 pr-4 py-2 rounded-full text-sm border-none bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary/30 w-full">
+        <div
+          class="absolute left-9 top-7 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-500">
+          <i class="ri-search-line"></i>
+        </div>
+      </div>
+      <nav class="flex flex-col space-y-4">
+        <a href="#" class="text-gray-800 hover:text-primary font-medium py-2">Home</a>
+        <a href="#categories" class="text-gray-800 hover:text-primary font-medium py-2">Categories</a>
+        <a href="#about" class="text-gray-800 hover:text-primary font-medium py-2">About Us</a>
+        <a href="#testimonials" class="text-gray-800 hover:text-primary font-medium py-2">Reviews</a>
+        <a href="#contact" class="text-gray-800 hover:text-primary font-medium py-2">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <!-- Hero Section -->
+  <section class="relative w-full h-[100vh] flex items-center"
+    style="background-image: url('W3.jpeg'); background-size: cover; background-position: center;">
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    <div class="container mx-auto px-6 relative z-10 w-full">
+      <div class="max-w-2xl">
+        <h1 class="text-5xl md:text-6xl font-bold text-white mb-4 serif-font">A Taste of the African Sun.</h1>
+        <p class="text-xl text-white mb-8 max-w-lg">From the highlands of Kenya to the valleys of the Cederberg, bring home the warmth and vibrance of Afro Tea.</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#products"
+            class="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-button font-medium transition-all whitespace-nowrap">Find Your Flavor</a>
+          <a href="#categories"
+            class="bg-white hover:bg-gray-100 text-gray-800 px-8 py-3 rounded-button font-medium transition-all whitespace-nowrap">View
+          Flavors</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Categories Section -->
+  <section id="categories" class="py-16 px-6">
+    <div class="container mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 serif-font">Unlock the Aroma</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">From the citrusy notes of Kenyan Purple tea to the honeyed warmth of Rooibos, discover a sensory journey steeped in tradition.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Category 1: Murtis -->
+        <div class="category-card bg-white rounded-lg shadow-md overflow-hidden transition-all">
+          <div class="h-64 overflow-hidden">
+            <img
+              src="2.jpeg"
+              alt="Ginger & Lemon Infusion" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold mb-3 serif-font">Ginger & Lemon Infusion</h3>
+            <p class="text-gray-600 mb-4">A refreshing blend of zesty lemon and spicy ginger, perfect for any time of day.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Lemon</span>
+              <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Ginger</span>
+            </div>
+            <a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+              Explore Collection
+              <i class="ri-arrow-right-line ml-2"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Category 2: Pooja Items -->
+        <div class="category-card bg-white rounded-lg shadow-md overflow-hidden transition-all">
+          <div class="h-64 overflow-hidden">
+            <img
+              src="1.jpeg"
+              alt="Mango & Ginger Infusion" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold mb-3 serif-font">Mango & Ginger Infusion</h3>
+            <p class="text-gray-600 mb-4">A delightful blend of sweet mango and spicy ginger, perfect for a refreshing tea experience.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Mango</span>
+              <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Ginger</span>
+            </div>
+            <a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+              Explore Collection
+              <i class="ri-arrow-right-line ml-2"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Category 3: Spiritual Decor -->
+        <div class="category-card bg-white rounded-lg shadow-md overflow-hidden transition-all">
+          <div class="h-64 overflow-hidden">
+            <img
+              src="3.jpeg"
+              alt="Adian Fruit with Lemon & Ginger" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold mb-3 serif-font">Adian Fruit with Lemon & Ginger</h3>
+            <p class="text-gray-600 mb-4">Experience the vibrant flavors of Adian fruit, perfectly complemented by zesty lemon and spicy ginger.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Adian Fruit</span>
+              <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Lemon</span>
+              <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Ginger</span>
+            </div>
+            <a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+              Explore Collection
+              <i class="ri-arrow-right-line ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Products Section -->
+  <section id="products" class="py-16 px-6 bg-gray-50">
+    <div class="container mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 serif-font">Featured Products</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Caffeine-free warmth from the sun-drenched Cederberg.</p>
+      </div>
+      <div class="flex flex-col lg:flex-row gap-8">
+        <!-- Filters Sidebar -->
+        <div class="lg:w-1/4">
+          <div class="bg-white rounded-lg shadow-md p-6 sticky top-24">
+            <div class="flex items-center justify-between mb-6">
+              <h3 class="text-xl font-semibold">Filters</h3>
+              <button class="text-primary text-sm font-medium hover:underline">Clear All</button>
+            </div>
+            <!-- Deity Filter -->
+            <div class="mb-6">
+              <h4 class="font-medium mb-3">Under Tea Type</h4>
+              <div class="space-y-2">
+                <label class="flex items-center cursor-pointer">
+                  <input type="checkbox" class="custom-checkbox mr-3">
+                  <span class="text-gray-700">Green Tea</span>
+                  <span class="text-gray-400 text-sm ml-auto">24</span>
+                </label>
+                <label class="flex items-center cursor-pointer">
+                  <input type="checkbox" class="custom-checkbox mr-3">
+                  <span class="text-gray-700">Black Tea</span>
+                  <span class="text-gray-400 text-sm ml-auto">18</span>
+                </label>
+                <label class="flex items-center cursor-pointer">
+                  <input type="checkbox" class="custom-checkbox mr-3">
+                  <span class="text-gray-700">Herbal/Tisane</span>
+                  <span class="text-gray-400 text-sm ml-auto">16</span>
+                </label>
+                <label class="flex items-center cursor-pointer">
+                  <input type="checkbox" class="custom-checkbox mr-3">
+                  <span class="text-gray-700">Oolong/span>
+                  <span class="text-gray-400 text-sm ml-auto">12</span>
+                </label>
+                <label class="flex items-center cursor-pointer">
+                  <input type="checkbox" class="custom-checkbox mr-3">
+                  <span class="text-gray-700">White Tea</span>
+                  <span class="text-gray-400 text-sm ml-auto">15</span>
+                </label>
+              </div>
+            </div>
+            <!-- Material Filter -->
+            <div class="mb-6">
+              <h4 class="font-medium mb-3">Under Packaging<h4>
+              <div class="space-y-2">
+                <label class="flex items-center cursor-pointer">
+                  <input type="checkbox" class="custom-checkbox mr-3">
+                  <span class="text-gray-700">Loose Leaf</span>
+                  <span class="text-gray-400 text-sm ml-auto">32</span>
+                </label>
+                <label class="flex items-center cursor-pointer">
+                  <input type="checkbox" class="custom-checkbox mr-3">
+                  <span class="text-gray-700">Tea Bags</span>
+                  <span class="text-gray-400 text-sm ml-auto">18</span>
+                </label>
+                <label class="flex items-center cursor-pointer">
+                  <input type="checkbox" class="custom-checkbox mr-3">
+                  <span class="text-gray-700">Gifts Sets</span>
+                  <span class="text-gray-400 text-sm ml-auto">14</span>
+                </label>
+                <label class="flex items-center cursor-pointer">
+                  <input type="checkbox" class="custom-checkbox mr-3">
+                  <span class="text-gray-700">Tins</span>
+                  <span class="text-gray-400 text-sm ml-auto">9</span>
+                </label>
+              </div>
+            </div>
+            <!-- Size Filter -->
+            <div class="mb-6">
+              <h4 class="font-medium mb-3">Under Weight / Quantity</h4>
+              <div class="space-y-2">
+                <label class="flex items-center cursor-pointer">
+                  <input type="checkbox" class="custom-checkbox mr-3">
+                  <span class="text-gray-700">50g (Trial Size)</span>
+                  <span class="text-gray-400 text-sm ml-auto">28</span>
+                </label>
+                <label class="flex items-center cursor-pointer">
+                  <input type="checkbox" class="custom-checkbox mr-3">
+                  <span class="text-gray-700">100g (Standard Size)</span>
+                  <span class="text-gray-400 text-sm ml-auto">22</span>
+                </label>
+                <label class="flex items-center cursor-pointer">
+                  <input type="checkbox" class="custom-checkbox mr-3">
+                  <span class="text-gray-700">250g (Value Pack)</span>
+                  <span class="text-gray-400 text-sm ml-auto">15</span>
+                </label>
+                <label class="flex items-center cursor-pointer">
+                  <input type="checkbox" class="custom-checkbox mr-3">
+                  <span class="text-gray-700">15-Count (Tea Bags)</span>
+                  <span class="text-gray-400 text-sm ml-auto">10</span>
+                </label>
+              </div>
+            </div>
+            <!-- Price Range -->
+            <div>
+              <h4 class="font-medium mb-3">Price Range</h4>
+              <div class="mb-4">
+                <input type="range" min="100" max="10000" value="5000" class="custom-range" id="price-range">
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-gray-600 text-sm">Gh₵. 20</span>
+                <span class="text-gray-800 font-medium" id="price-value">Gh₵. 50</span>
+                <span class="text-gray-600 text-sm">Gh₵. 100</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Products Grid -->
+        <div class="lg:w-3/4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Product 1 -->
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all">
+              <div class="relative h-64 overflow-hidden">
+                <img
+                  src="P1.jpeg"
+                  alt="Hibiscus & Ginger With Clovers and Grains of Slam " class="w-full h-full object-cover object-top">
+                <div class="quick-view absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                  <button
+                    class="quick-view-btn bg-white text-gray-800 px-4 py-2 rounded-button font-medium hover:bg-gray-100 transition-all whitespace-nowrap">Quick
+                    View</button>
+                </div>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center mb-2">
+                  <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full">Ginger</span>
+                  <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full ml-2">Hibiscus</span>
+                </div>
+                <h3 class="text-lg font-semibold mb-1">Hibiscus & Ginger With Clovers and Grains of Slam</h3>
+                <div class="flex items-center mb-3">
+                  <div class="flex text-yellow-400">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-half-fill"></i>
+                  </div>
+                  <span class="text-gray-500 text-sm ml-1">(28)</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div>
+                    <span class="text-gray-400 line-through text-sm">Gh₵. 100</span>
+                    <span class="text-gray-800 font-bold ml-2">Gh₵. 50</span>
+                  </div>
+                  <button
+                    class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full hover:bg-primary/20 transition-all">
+                    <i class="ri-shopping-cart-2-line"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all">
+              <div class="relative h-64 overflow-hidden">
+                <img
+                  src="P2.jpeg"
+                  alt="Lemongrass & Ginger" class="w-full h-full object-cover object-top">
+                <div class="quick-view absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                  <button
+                    class="quick-view-btn bg-white text-gray-800 px-4 py-2 rounded-button font-medium hover:bg-gray-100 transition-all whitespace-nowrap">Quick
+                    View</button>
+                </div>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center mb-2">
+                  <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full">Lemongrass</span>
+                  <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full ml-2">Ginger</span>
+                </div>
+                <h3 class="text-lg font-semibold mb-1">Lemongrass & Ginger</h3>
+                <div class="flex items-center mb-3">
+                  <div class="flex text-yellow-400">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                  </div>
+                  <span class="text-gray-500 text-sm ml-1">(42)</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div>
+                    <span class="text-gray-400 line-through text-sm">Gh₵. 100</span>
+                    <span class="text-gray-800 font-bold ml-2">Gh₵. 50</span>
+                  </div>
+                  <button
+                    class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full hover:bg-primary/20 transition-all">
+                    <i class="ri-shopping-cart-2-line"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all">
+              <div class="relative h-64 overflow-hidden">
+                <img
+                  src="P4.jpeg"
+                  alt="Kinkeliba leaves" class="w-full h-full object-cover object-top">
+                <div class="quick-view absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                  <button
+                    class="quick-view-btn bg-white text-gray-800 px-4 py-2 rounded-button font-medium hover:bg-gray-100 transition-all whitespace-nowrap">Quick
+                    View</button>
+                </div>
+                <div class="absolute top-3 left-3 bg-red-500 text-white text-xs px-2 py-1 rounded-full">Sale</div>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center mb-2">
+                  <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full">Kinkeliba</span>
+                  <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full ml-2">Leaves</span>
+                </div>
+                <h3 class="text-lg font-semibold mb-1">Kinkeliba Leaves</h3>
+                <div class="flex items-center mb-3">
+                  <div class="flex text-yellow-400">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-line"></i>
+                  </div>
+                  <span class="text-gray-500 text-sm ml-1">(35)</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div>
+                    <span class="text-gray-400 line-through text-sm">Gh₵. 100</span>
+                    <span class="text-gray-800 font-bold ml-2">Gh₵. 50</span>
+                  </div>
+                  <button
+                    class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full hover:bg-primary/20 transition-all">
+                    <i class="ri-shopping-cart-2-line"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all">
+              <div class="relative h-64 overflow-hidden">
+                <img
+                  src="P7.jpeg"
+                  alt="Moringa & Ginger" class="w-full h-full object-cover object-top">
+                <div class="quick-view absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                  <button
+                    class="quick-view-btn bg-white text-gray-800 px-4 py-2 rounded-button font-medium hover:bg-gray-100 transition-all whitespace-nowrap">Quick
+                    View</button>
+                </div>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center mb-2">
+                  <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full">Moringa</span>
+                  <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full ml-2">Ginger</span>
+                </div>
+                <h3 class="text-lg font-semibold mb-1">Moringa & Ginger</h3>
+                <div class="flex items-center mb-3">
+                  <div class="flex text-yellow-400">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-half-fill"></i>
+                  </div>
+                  <span class="text-gray-500 text-sm ml-1">(19)</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div>
+                    <span class="text-gray-400 line-through text-sm">Gh₵. 100</span>
+                    <span class="text-gray-800 font-bold ml-2">Gh₵. 50</span>
+                  </div>
+                  <button
+                    class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full hover:bg-primary/20 transition-all">
+                    <i class="ri-shopping-cart-2-line"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Product 5 -->
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all">
+              <div class="relative h-64 overflow-hidden">
+                <img
+                  src="P5.jpeg"
+                  alt="Hibiscus & Ginger" class="w-full h-full object-cover object-top">
+                <div class="quick-view absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                  <button
+                    class="quick-view-btn bg-white text-gray-800 px-4 py-2 rounded-button font-medium hover:bg-gray-100 transition-all whitespace-nowrap">Quick
+                    View</button>
+                </div>
+                <div class="absolute top-3 left-3 bg-green-500 text-white text-xs px-2 py-1 rounded-full">Bestseller
+                </div>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center mb-2">
+                  <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full">Hibiscus</span>
+                  <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full ml-2">Ginger</span>
+                </div>
+                <h3 class="text-lg font-semibold mb-1">Hibiscus & Ginger</h3>
+                <div class="flex items-center mb-3">
+                  <div class="flex text-yellow-400">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                  </div>
+                  <span class="text-gray-500 text-sm ml-1">(56)</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div>
+                    <span class="text-gray-400 line-through text-sm">Gh₵. 100</span>
+                    <span class="text-gray-800 font-bold ml-2">Gh₵. 50</span>
+                  </div>
+                  <button
+                    class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full hover:bg-primary/20 transition-all">
+                    <i class="ri-shopping-cart-2-line"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Product 6 -->
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all">
+              <div class="relative h-64 overflow-hidden">
+                <img
+                  src="P6.jpeg"
+                  alt="Lemon & Ginger" class="w-full h-full object-cover object-top">
+                <div class="quick-view absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                  <button
+                    class="quick-view-btn bg-white text-gray-800 px-4 py-2 rounded-button font-medium hover:bg-gray-100 transition-all whitespace-nowrap">Quick
+                    View</button>
+                </div>
+              </div>
+              <div class="p-4">
+                <div class="flex items-center mb-2">
+                  <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full">Lemon</span>
+                  <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full ml-2">Ginger</span>
+                </div>
+                <h3 class="text-lg font-semibold mb-1">Lemon & Ginger</h3>
+                <div class="flex items-center mb-3">
+                  <div class="flex text-yellow-400">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-line"></i>
+                  </div>
+                  <span class="text-gray-500 text-sm ml-1">(24)</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div>
+                    <span class="text-gray-400 line-through text-sm">Gh₵. 100</span>
+                    <span class="text-gray-800 font-bold ml-2">Gh₵. 50</span>
+                  </div>
+                  <button
+                    class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full hover:bg-primary/20 transition-all">
+                    <i class="ri-shopping-cart-2-line"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Load More Button -->
+          <div class="flex justify-center mt-10">
+            <button
+              class="bg-white border border-gray-300 hover:bg-gray-50 text-gray-800 px-6 py-3 rounded-button font-medium transition-all whitespace-nowrap flex items-center">
+              Load More Products
+              <i class="ri-arrow-down-line ml-2"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About Us Section -->
+  <section id="about" class="py-16 px-6 bg-white">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <img
+            src="A.jpeg"
+            alt="Our Artisans" class="rounded-lg shadow-lg w-full h-auto">
+        </div>
+        <div>
+          <div class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full mb-4">Our Story</div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 serif-font">The Journey in Every Leaf</h2>
+          <p class="text-gray-600 mb-6">Afro Tea began with a simple realization: the world’s finest teas grow under the African sun, yet their stories are rarely told by us. 
+            We’ve traveled from the misty highlands of Kenya to the golden valleys of the Cederberg to bring you more than just a drink. We bring you a ritual—a piece of the 
+            continent’s soul, harvested with respect and poured with pride.</p>
+         
+            <p class="text-gray-600 mb-8">We believe the ritual of tea should be as bold as the land it comes from. 
+              Afro Tea is dedicated to sourcing premium, single-origin blends directly from African estates. 
+              By honoring the soil and the hands that tend to it, we ensure every cup reflects the vibrant spirit and ancient traditions of our heritage.
+    </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="flex items-start">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mr-4 flex-shrink-0">
+                <i class="ri-hand-heart-line text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold mb-2">Premium Quality</h3>
+                <p class="text-gray-600">Our leaves are handpicked at their peak to ensure the finest flavor and aroma.</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mr-4 flex-shrink-0">
+                <i class="ri-truck-line text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold mb-2">Fast Delivery</h3>
+                <p class="text-gray-600">We ensure swift delivery so you can enjoy your tea without delay.</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mr-4 flex-shrink-0">
+                <i class="ri-recycle-line text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold mb-2">Eco-Friendly</h3>
+                <p class="text-gray-600">We use sustainable materials and eco-friendly packaging.</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mr-4 flex-shrink-0">
+                <i class="ri-customer-service-2-line text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold mb-2">Dedicated Support</h3>
+                <p class="text-gray-600">Our team is available to assist you with any queries or concerns.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-16 px-6 bg-gray-50">
+    <div class="container mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 serif-font">What Our Devotees Say</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Hear from our customers about their experience with our divine
+          products and services.</p>
+      </div>
+      <div class="relative" id="testimonial-slider">
+        <div class="flex overflow-x-hidden" id="testimonial-container">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-slide min-w-full md:min-w-[33.333%] px-4">
+            <div class="bg-white rounded-lg shadow-md p-6 h-full">
+              <div class="flex text-yellow-400 mb-4">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+              </div>
+              <p class="text-gray-600 mb-6">"The moment I opened my first tin of Rift Valley Bold, the aroma filled the whole room. 
+                You can actually taste the quality and the sunshine in every sip. It’s no longer just tea; it’s my morning ritual."</p>
+              <div class="flex items-center">
+                <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                  <img
+                    src="T3.jpeg"
+                    alt="Priya Sharma" class="w-full h-full object-cover">
+                </div>
+                <div>
+                  <h4 class="font-semibold">Ama.K</h4>
+                  <p class="text-gray-500 text-sm">Accra</p>
+                </div>
+                <div class="ml-auto">
+                  <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full flex items-center">
+                    <i class="ri-checkbox-circle-fill mr-1"></i>
+                    Verified Buyer
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="testimonial-slide min-w-full md:min-w-[33.333%] px-4">
+            <div class="bg-white rounded-lg shadow-md p-6 h-full">
+              <div class="flex text-yellow-400 mb-4">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+              </div>
+              <p class="text-gray-600 mb-6">Finally, a tea brand that feels premium and rooted! The Ruby Hibiscus is my absolute favorite—it’s vibrant, tart, and incredibly refreshing. 
+                Fast shipping and beautiful packaging too."</p>
+              <div class="flex items-center">
+                <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                  <img
+                    src="T2.jpeg"
+                    alt="Rajesh Patel" class="w-full h-full object-cover">
+                </div>
+                <div>
+                  <h4 class="font-semibold">Sarah.M</h4>
+                  <p class="text-gray-500 text-sm">London</p>
+                </div>
+                <div class="ml-auto">
+                  <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full flex items-center">
+                    <i class="ri-checkbox-circle-fill mr-1"></i>
+                    Verified Buyer
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="testimonial-slide min-w-full md:min-w-[33.333%] px-4">
+            <div class="bg-white rounded-lg shadow-md p-6 h-full">
+              <div class="flex text-yellow-400 mb-4">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-half-fill"></i>
+              </div>
+              <p class="text-gray-600 mb-6">"I’ve been looking for an authentic taste of home for a long time. 
+                Afro Tea captures the soul of the continent perfectly. The Savanna Gold takes me right back to the valleys. Truly world-class."</p>
+              <div class="flex items-center">
+                <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                  <img
+                    src="T1.jpeg"
+                    alt="Lakshmi Venkatesh" class="w-full h-full object-cover">
+                </div>
+                <div>
+                  <h4 class="font-semibold">Kofi.O</h4>
+                  <p class="text-gray-500 text-sm">Kumasi</p>
+                </div>
+                <div class="ml-auto">
+                  <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full flex items-center">
+                    <i class="ri-checkbox-circle-fill mr-1"></i>
+                    Verified Buyer
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Navigation Dots -->
+        <div class="flex justify-center mt-8">
+          <button class="w-3 h-3 rounded-full bg-primary mx-1 testimonial-dot active" data-index="0"></button>
+          <button class="w-3 h-3 rounded-full bg-gray-300 mx-1 testimonial-dot" data-index="1"></button>
+          <button class="w-3 h-3 rounded-full bg-gray-300 mx-1 testimonial-dot" data-index="2"></button>
+        </div>
+        <!-- Navigation Arrows -->
+        <button
+          class="absolute top-1/2 left-0 transform -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md text-gray-800 hover:bg-gray-100 focus:outline-none z-10 hidden md:flex"
+          id="prev-testimonial">
+          <i class="ri-arrow-left-s-line text-xl"></i>
+        </button>
+        <button
+          class="absolute top-1/2 right-0 transform -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md text-gray-800 hover:bg-gray-100 focus:outline-none z-10 hidden md:flex"
+          id="next-testimonial">
+          <i class="ri-arrow-right-s-line text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 px-6 bg-white">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div>
+          <div class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full mb-4">Get in Touch</div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 serif-font">Have Questions? We're Here to Help</h2>
+          <p class="text-gray-600 mb-8">Whether you have questions about our products, need assistance with your order,
+            or want to learn more about our services, our team is ready to assist you.</p>
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mr-4 flex-shrink-0">
+                <i class="ri-map-pin-line text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold mb-1">Our Location</h3>
+                <p class="text-gray-600">7L Police Post Lane , Stadium RD . Amasaman,<br> Accra, Ghana
+</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mr-4 flex-shrink-0">
+                <i class="ri-phone-line text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold mb-1">Phone Number</h3>
+                <p class="text-gray-600">+233 50598057</p>
+                <p class="text-gray-600">Mon-Sat: 10:00 AM - 7:00 PM</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mr-4 flex-shrink-0">
+                <i class="ri-mail-line text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold mb-1">Email Address</h3>
+                <p class="text-gray-600">info@roy.tech.com</p>
+                <p class="text-gray-600">support@roy.tech.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-8">
+            <h3 class="text-lg font-semibold mb-4">Connect With Us</h3>
+            <div class="flex space-x-4">
+              <a href="#"
+                class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full hover:bg-primary/20 transition-all">
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a href="https://www.instagram.com/_v.roy62_/#" target="_blank"
+                class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full hover:bg-primary/20 transition-all">
+                <i class="ri-instagram-line"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/ishmael-mustapha-99a923378/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BIk4lMb3ER0m1x9rELLBmgg%3D%3D" target="_blank"
+                class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full hover:bg-primary/20 transition-all">
+                <i class="ri-linkedin-fill"></i>
+              </a>
+              <a href="https://github.com/" target="_blank"
+                class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full hover:bg-primary/20 transition-all">
+                <i class="ri-github-fill"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="bg-white rounded-lg shadow-md p-8">
+            <h3 class="text-2xl font-semibold mb-6 serif-font">Send Us a Message</h3>
+            <form id="contact-form">
+              <div class="mb-6">
+                <label for="name" class="block text-gray-700 mb-2">Your Name</label>
+                <input type="text" id="name"
+                  class="w-full px-4 py-3 rounded-button border-none bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary/30 text-sm"
+                  placeholder="Enter your full name" required>
+              </div>
+              <div class="mb-6">
+                <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+                <input type="email" id="email"
+                  class="w-full px-4 py-3 rounded-button border-none bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary/30 text-sm"
+                  placeholder="Enter your email address" required>
+              </div>
+              <div class="mb-6">
+                <label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
+                <input type="tel" id="phone"
+                  class="w-full px-4 py-3 rounded-button border-none bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary/30 text-sm"
+                  placeholder="Enter your phone number">
+              </div>
+              <div class="mb-6">
+                <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                <select id="subject"
+                  class="w-full px-4 py-3 rounded-button border-none bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary/30 text-sm pr-8 appearance-none"
+                  required>
+                  <option value="" disabled selected>Select a subject</option>
+                  <option value="product-inquiry">Product Inquiry</option>
+                  <option value="order-status">Order Status</option>
+                  <option value="return-exchange">Return or Exchange</option>
+                  <option value="feedback">Feedback</option>
+                  <option value="other">Other</option>
+                </select>
+                <div class="absolute right-12 top-1/2 transform -translate-y-1/2 pointer-events-none text-gray-500">
+                  <i class="ri-arrow-down-s-line"></i>
+                </div>
+              </div>
+              <div class="mb-6">
+                <label for="message" class="block text-gray-700 mb-2">Your Message</label>
+                <textarea id="message" rows="5"
+                  class="w-full px-4 py-3 rounded-button border-none bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary/30 text-sm"
+                  placeholder="Type your message here..." required></textarea>
+              </div>
+              <div class="flex items-center mb-6">
+                <input type="checkbox" id="subscribe" class="custom-checkbox mr-3">
+                <label for="subscribe" class="text-gray-600 text-sm">Subscribe to our newsletter for updates on new
+                  arrivals and special offers.</label>
+              </div>
+              <div class="flex flex-wrap gap-4">
+                <button type="submit"
+                  class="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-button font-medium transition-all whitespace-nowrap">Send
+                  Message</button>
+                <a href="https://wa.me/919876543210" target="_blank"
+                  class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-button font-medium transition-all flex items-center whitespace-nowrap">
+                  <i class="ri-whatsapp-line mr-2"></i>
+                  Chat on WhatsApp
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white pt-16 pb-8 px-6">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <a href="#" class="text-3xl font-['Pacifico'] text-primary mb-6 inline-block">Afro Tea</a>
+          <p class="text-gray-400 mb-6">Bringing the essence of Africa to your cup.</p>
+          <div class="flex space-x-4">
+            <a href="#"
+              class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700 transition-all">
+              <i class="ri-facebook-fill"></i>
+            </a>
+            <a href="https://www.instagram.com/_v.roy62_/#" target="_blank"
+              class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700 transition-all">
+              <i class="ri-instagram-line"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/ishmael-mustapha-99a923378/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BIk4lMb3ER0m1x9rELLBmgg%3D%3D" target="_blank"
+              class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700 transition-all">
+              <i class="ri-linkedin-fill"></i>
+            </a>
+            <a href="https://github.com/" target="_blank"
+              class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700 transition-all">
+              <i class="ri-github-fill"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Home</a></li>
+            <li><a href="#categories" class="text-gray-400 hover:text-primary transition-colors">Categories</a></li>
+            <li><a href="#about" class="text-gray-400 hover:text-primary transition-colors">About Us</a></li>
+            <li><a href="#testimonials" class="text-gray-400 hover:text-primary transition-colors">Reviews</a></li>
+            <li><a href="#contact" class="text-gray-400 hover:text-primary transition-colors">Contact</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Customer Service</h3>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">My Account</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Track Order</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Shipping Policy</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Return Policy</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">FAQs</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Newsletter</h3>
+          <p class="text-gray-400 mb-4">Subscribe to receive updates on new arrivals and special offers.</p>
+          <form class="mb-6">
+            <div class="flex">
+              <input type="email" placeholder="Your email address"
+                class="flex-grow px-4 py-3 rounded-l-button border-none bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary/30 text-sm text-white">
+              <button type="submit"
+                class="bg-primary hover:bg-primary/90 text-white px-4 py-3 rounded-r-button font-medium transition-all whitespace-nowrap">Subscribe</button>
+            </div>
+          </form>
+          <h3 class="text-lg font-semibold mb-4">We Accept</h3>
+          <div class="flex space-x-3">
+            <div class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded text-white">
+              <i class="ri-visa-fill text-xl"></i>
+            </div>
+            <div class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded text-white">
+              <i class="ri-mastercard-fill text-xl"></i>
+            </div>
+            <div class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded text-white">
+              <i class="ri-paypal-fill text-xl"></i>
+            </div>
+            <div class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded text-white">
+              <i class="ri-amazon-pay-fill text-xl"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2026 Afro Tea. All rights reserved. <br> Developer Roy.Tech</p>
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-400 hover:text-primary text-sm">Privacy Policy</a>
+            <a href="#" class="text-gray-400 hover:text-primary text-sm">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Quick View Modal -->
+  <div id="quick-view-modal" class="fixed inset-0 z-50 hidden">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="absolute inset-0 flex items-center justify-center p-4">
+      <div class="bg-white rounded-lg w-full max-w-4xl max-h-[90vh] overflow-y-auto relative">
+        <button id="close-modal"
+          class="absolute right-4 top-4 w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-700">
+          <i class="ri-close-line text-2xl"></i>
+        </button>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
+          <div class="relative">
+            <img id="modal-product-image" src="" alt="" class="w-full h-auto rounded-lg">
+          </div>
+          <div>
+            <h2 id="modal-product-name" class="text-2xl font-semibold mb-2"></h2>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-half-fill"></i>
+              </div>
+              <span class="text-gray-500 text-sm ml-2">(28 reviews)</span>
+            </div>
+            <div class="mb-4">
+              <span id="modal-product-original-price" class="text-gray-400 line-through text-lg"></span>
+              <span id="modal-product-price" class="text-2xl font-bold text-gray-800 ml-2"></span>
+            </div>
+            <p id="modal-product-description" class="text-gray-600 mb-6"></p>
+            <div class="mb-6">
+              <h3 class="font-medium mb-2">Material</h3>
+              <div id="modal-product-material" class="flex gap-2"></div>
+            </div>
+            <div class="mb-6">
+              <h3 class="font-medium mb-2">Size</h3>
+              <div class="flex gap-2">
+                <button
+                  class="size-btn px-4 py-2 border border-gray-300 rounded-button hover:border-primary hover:text-primary">Small</button>
+                <button
+                  class="size-btn px-4 py-2 border border-gray-300 rounded-button hover:border-primary hover:text-primary">Medium</button>
+                <button
+                  class="size-btn px-4 py-2 border border-gray-300 rounded-button hover:border-primary hover:text-primary">Large</button>
+              </div>
+            </div>
+            <div class="mb-6">
+              <h3 class="font-medium mb-2">Quantity</h3>
+              <div class="flex items-center">
+                <button id="decrease-quantity"
+                  class="w-10 h-10 flex items-center justify-center border border-gray-300 rounded-l-button hover:bg-gray-50">
+                  <i class="ri-subtract-line"></i>
+                </button>
+                <input type="number" id="quantity" value="1" min="1"
+                  class="w-16 h-10 border-y border-gray-300 text-center focus:outline-none" readonly>
+                <button id="increase-quantity"
+                  class="w-10 h-10 flex items-center justify-center border border-gray-300 rounded-r-button hover:bg-gray-50">
+                  <i class="ri-add-line"></i>
+                </button>
+              </div>
+            </div>
+            <button
+              class="w-full bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-button font-medium transition-all flex items-center justify-center">
+              <i class="ri-shopping-cart-2-line mr-2"></i>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+</body>
+
+</html>
